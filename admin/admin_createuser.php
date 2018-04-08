@@ -40,17 +40,16 @@
 
   <div class="nav">
 
-        <a href="admin_createuser.php">Create User</a>
-        <a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
-
     <div class="userInfo"><p class="user">User: </p><p class="username"><?php echo $_SESSION['user_name']; ?><p></div><br>
   <div class="userInfo">
       <p class="user">Last Successful Login:</p><p class="username"><?php echo $_SESSION['user_last'];?></p><br>
 
       <ul>
-        <li><a href="#">Edit Pre-Existing Movies</a></li>
-        <li><a href="#">Add Movies</a></li>
-        <li><a href="#">Account Settings</a></li>
+        <li><a href="admin_createuser.php">Create User</a></li>
+        <li><a href="admin_edituser.php">Edit User</a></li>
+        <li><a href="admin_addmovie.php">Add Movie</a></li>
+        <li><a href="editall.php">Edit Movies</a></li><br>
+        <li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
       </ul>
     </div>
   </div>

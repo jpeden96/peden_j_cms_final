@@ -24,6 +24,10 @@
 			<p>{$row['movies_title']}</p>
 			<p>{$row['movies_year']}</p>
 			<p>{$row['movies_storyline']}</p>
+			<video autoplay controls>
+    	<source src=\"videos/{$row['movies_trailer']}\">
+  		</video>
+
 			<a href=\"index.php\">Back...</a>
 			";
 

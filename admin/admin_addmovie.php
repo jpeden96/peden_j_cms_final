@@ -30,9 +30,23 @@
 <title>Welcome to your admin panel login</title>
 </head>
 <body>
-  <div class="">
+    <div class="nav">
 
-<div class="">
+      <div class="userInfo"><p class="user">User: </p><p class="username"><?php echo $_SESSION['user_name']; ?><p></div><br>
+    <div class="userInfo">
+        <p class="user">Last Successful Login:</p><p class="username"><?php echo $_SESSION['user_last'];?></p><br>
+
+        <ul>
+          <li><a href="admin_createuser.php">Create User</a></li>
+          <li><a href="admin_edituser.php">Edit User</a></li>
+          <li><a href="admin_addmovie.php">Add Movie</a></li>
+          <li><a href="editall.php">Edit Movies</a></li><br>
+          <li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+
+<div class="intro">
   <?php if(!empty($message)){ echo $message;} ?> <!--so the message doesn't always run, only when the login process doesn't work - -->
   <br>
   <h1>Adding a Movie</h1>
@@ -61,7 +75,6 @@
       <br><br>
       <input type="submit" name="submit" value="Add Movie">
     </form>
-  </div>
   </div>
 </body>
 </html>

@@ -2,8 +2,6 @@
   require_once('phpscripts/config.php');
   confirm_logged_in();
 
-// $query=mysql_query("UPDATE tablename SET LastLogin=now() WHERE CID='$CID'");
-// $result = mysql_query($query);
 ?>
 
 <!doctype html>
@@ -27,6 +25,8 @@
     <ul>
       <li><a href="admin_createuser.php">Create User</a></li>
       <li><a href="admin_edituser.php">Edit User</a></li>
+      <li><a href="admin_addmovie.php">Add Movie</a></li>
+      <li><a href="editall.php">Edit Movies</a></li><br>
       <li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
     </ul>
   </div>
