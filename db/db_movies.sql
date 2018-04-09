@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2018 at 07:23 PM
+-- Generation Time: Apr 08, 2018 at 11:39 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.6
 
@@ -75,8 +75,8 @@ CREATE TABLE `tbl_movies` (
 --
 
 INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
-(1, 'wherethewildthingsare.jpg', 'Where The Wind Things Are', '2009', '1hr 41min', 'Yearning for escape and adventure, a young boy runs away from home and sails to an island filled with creatures that take him in as their king.', 'wherehtwildthingsare.mp4', '16 October 2009'),
-(2, 'boyhood.jpg', 'Boyhood', '2014', '2hr 45min', 'Filmed over short periods from 2002 to 2013, Boyhood is a ground-breaking cinematic experience covering 12 years in the life of a family. At the centre is Mason, who with his sister Samantha, is taken on an emotional and transcendent journey through the years, from childhood to adulthood.', 'boyhood.mp4', '15 August 2014'),
+(1, 'wherethewildthingsare.jpg', 'Where The Wild Things Are', '2009', '1hr 41min', 'Yearning for escape and adventure, a young boy runs away from home and sails to an island filled with creatures that take him in as their king.', 'wherethewildthingsare.mp4', '16 October 2009'),
+(2, 'boyhood.jpg', 'Boyhood', '2014', '2hr 45min', 'Filmed over short periods from 2002 - 2013, Boyhood is a ground-breaking cinematic experience covering 12 years in the life of a family. At the centre is Mason, who with his sister Samantha, is taken on an emotional and transcendent journey through the years, from childhood to adulthood.', 'boyhood.mp4', '15 August 2014'),
 (3, 'theroadwithin.jpg', 'The Road Within', '2014', '1hr 40min', 'A young man with Tourette\'s Syndrome embarks on a road trip with his recently-deceased mother\'s ashes.', 'theroadwithin.mp4', '4 June 2015'),
 (4, 'wishiwashere.jpg', 'Wish I Was Here', '2014', '1hr 46min', 'A struggling actor, father and husband finds himself at a major crossroads, which forces him to examine his life, his family and his career.', 'wishiwashere.mp4', '24 July 2014'),
 (5, 'moonrisekingdom.jpg', 'Moonrise Kingdom', '2012', '1hr 34min', 'A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.', 'moonrisekingdom.mp4', '29 June 2012'),
@@ -99,7 +99,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_y
 (22, 'chappie.jpg', 'Chappie', '2015', '2hr', 'In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.', 'chappie.mp4', '6 March 2015'),
 (23, 'rolemodels.jpg', 'Role Models', '2008', '1hr 39min', 'Wild behavior forces a pair of energy drink reps to enroll in a Big Brother program.', 'rolemodels.mp4', '7 November 2008'),
 (24, 'theartofgettingby.jpg', 'The Art of Getting By', '2011', '1hr 23min', 'George, a lonely and fatalistic teen who has made it all the way to his senior year without ever having done a real day of work, is befriended by Sally, a popular but complicated girl who recognizes in him a kindred spirit.', 'theartofgettingby.mp4', '17 June 2011'),
-(25, 'keanu.jpg', 'Keanu', '2016', '1hr 40min', 'When an L.A. drug kingpin\'s kitten unexpectedly enters the life of two cousins, they will have to go through gangs, hitmen and drug dealers who claim him in order to get him back.', 'trailer_default.mp4', '29 April 2016'),
+(25, 'keanu.jpg', 'Keanu', '2016', '1hr 40min', 'When an L.A. drug kingpin\'s kitten unexpectedly enters the life of two cousins, they will have to go through gangs, hitmen and drug dealers who claim him in order to get him back.', 'keanu.mp4', '29 April 2016'),
 (26, 'logan.jpg', 'Logan', '2017', '2hr 17min', 'In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan\'s attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.', 'logan.mp4', '3 March 2017'),
 (27, 'nerve.jpg', 'Nerve', '2016', '1hr 36min', 'A high school senior finds herself immersed in an online game of truth or dare, where her every move starts to become manipulated by an anonymous community of \"watchers.\"', 'nerve.mp4', '27 July 2016');
 
@@ -212,7 +212,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_last`, `user_fail`, `user_num_login`) VALUES
-(1, 'Hooolia', 'hooolia', '$2y$10$OS/6qVWWzxScWNkZxhonTO4z07PwPmDx7aeMgQfi7b6ibq5/KH3su', 'hooolia@email.com', '2018-02-09 21:35:59', '::1', '2018-04-08 09:40:13', 0, 1),
+(1, 'Hooolia', 'hooolia', '$2y$10$OS/6qVWWzxScWNkZxhonTO4z07PwPmDx7aeMgQfi7b6ibq5/KH3su', 'hooolia@email.com', '2018-02-09 21:35:59', '::1', '2018-04-08 15:37:24', 0, 1),
 (2, 'nick', 'nick', 'nick', 'nick@nick.com', '2018-03-01 23:57:18', 'no', '2018-03-01 23:57:18', 0, 0),
 (3, 'test', 'test', 'test', 'test', '2018-03-01 23:59:38', 'no', '2018-03-01 23:59:38', 2, 0),
 (4, 'test', 'test', 'test', 'test', '2018-03-01 23:59:50', 'no', '2018-03-01 23:59:50', 2, 0),
