@@ -12,23 +12,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Muli" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
 <title>Details</title>
 </head>
 <body>
 
+				<a href=\"index.php\">Back...</a>
 	<?php
 
 		if(!is_string($getMovie)) {
 			$row=mysqli_fetch_array($getMovie);
-			echo "<img src=\"images/{$row['movies_cover']}\" alt=\"{$row['movies_title']}\">
-			<p>{$row['movies_title']}</p>
+			echo "
+			<div class=\"details-movie\">
+			<img src=\"images/{$row['movies_cover']}\" alt=\"{$row['movies_title']}\" class=\"posters\">
+			<h1>{$row['movies_title']}</h1>
 			<p>{$row['movies_year']}</p>
 			<p>{$row['movies_storyline']}</p>
+			</div>
+			<div class=\"video\">
+			<h1>Watch the Trailer</h1>
 			<video autoplay controls>
     	<source src=\"videos/{$row['movies_trailer']}\">
   		</video>
+			</div>
 
-			<a href=\"index.php\">Back...</a>
 			";
 
 		}else {

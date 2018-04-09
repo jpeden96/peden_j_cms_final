@@ -78,7 +78,7 @@ h4 {
   float:  left;
   width:   20%;
   height:    inherit;
-  padding:    20px;
+    padding:    20px;
   color: #fff;
 }
  ul {
@@ -90,6 +90,19 @@ ul li {
     border-bottom:    1px solid #fff;
     text-align:    right;
     padding-bottom:    20px;
+      margin-bottom:    20px;
+      /* display: inline;
+      float:  left;
+      width: 300px;
+      margin: 10px; */
+
+}
+.movies {
+  /* display: inline;
+  float:  left;
+  width: 300px;
+  margin: 10px; */
+  align-items: center;
 }
 
  ul li a {
@@ -118,4 +131,24 @@ ul li {
 .username {
   font-family: 'Muli', sans-serif;
   text-align:    left;
+}
+.posters {
+  width: 300px;
+  border:   solid 2px #fff;
+}
+
+.edit-buttons {
+  background-color: #355266;
+  padding: 10px;
+  border-radius:    10px;
+  text-align: center !important;
+}
+
+.movies h2, p {
+    font-family: 'Muli', sans-serif;
+    color: #fff;
+}
+
+.movies {
+  width: 50%;
 }

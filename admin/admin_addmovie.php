@@ -1,23 +1,21 @@
 <?php
+	require_once('phpscripts/config.php');
 
-  ini_set('display_errors', 1);
-  error_reporting(E_ALL);
+	$tbl = "tbl_genre";
+	$genQuery = getAll($tbl);
 
-  require_once('phpscripts/config.php');
-
-  if(isset($_POST['submit'])){
-    $cover = $_FILES['cover']; //change from post to files array
-    $title = $_POST['title'];
-    $year = $_POST['year'];
-    $run = $_POST['runtime'];
-    $story = $_POST['storyline'];
-    $trailer = $_POST['trailer'];
-    $release = $_POST['release'];
-    echo $cover['name'];
-    echo $cover['type'];
-    echo $cover['size'];
-    echo $cover['tmp_name'];
-  }
+	if(isset($_POST['submit']) && $_POST['submit'] != null){
+		$cover = $_FILES['cover'];
+		$title = htmlspecialchars(addslashes($_POST['title']));
+		$year = htmlspecialchars(addslashes($_POST['year']));
+		$run = htmlspecialchars(addslashes($_POST['run']));
+		$story = htmlspecialchars(addslashes($_POST['story']));
+		$trailer = htmlspecialchars(addslashes($_POST['trailer']));
+		$release = htmlspecialchars(addslashes($_POST['release']));
+		$genre = htmlspecialchars(addslashes($_POST['genList']));
+		$result = addMovie($cover, $title, $year, $run, $story, $trailer, $release, $genre);
+		$message = $result;
+	}
 ?>
 
 <!doctype html>
@@ -40,7 +38,7 @@
           <li><a href="admin_createuser.php">Create User</a></li>
           <li><a href="admin_edituser.php">Edit User</a></li>
           <li><a href="admin_addmovie.php">Add Movie</a></li>
-          <li><a href="editall.php">Edit Movies</a></li><br>
+          <li><a href="admin_editmovie.php">Edit Movies</a></li><br>
           <li><a href="phpscripts/caller.php?caller_id=logout">Sign Out</a></li>
         </ul>
       </div>
@@ -50,30 +48,29 @@
   <?php if(!empty($message)){ echo $message;} ?> <!--so the message doesn't always run, only when the login process doesn't work - -->
   <br>
   <h1>Adding a Movie</h1>
-  <p>Please fill of the fields.</p>
     <form action="admin_addmovie.php" method="post" enctype="multipart/form-data">
       <label>Cover Image:</label><br>
       <input type="file" name="cover" value=""> <!--took out the classes inputText -->
       <br><br>
       <label>Movie Title:</label><br>
-      <input type="text" name="title" value="">
+      <input type="text" class="inputText" name="title" value="">
       <br><br>
       <label>Movie Year:</label><br>
-      <input type="text" name="year" value="">
+      <input type="text" class="inputText" name="year" value="">
       <br><br>
       <label>Movie Runtime:</label><br>
-      <input type="text" name="runtime" value="">
+      <input type="text" class="inputText" name="runtime" value="">
       <br><br>
       <label>Movie Storyline:</label><br>
-      <input type="text" name="storyline" value="">
+      <input type="text" class="inputText" name="storyline" value="">
       <br><br>
       <label>Movie Trailer:</label><br>
-      <input type="text" name="trailer" value=""> <!--should be file for mp4-->
+      <input type="text" class="inputText" name="trailer" value=""> <!--should be file for mp4-->
       <br><br>
       <label>Movie Release:</label><br>
-      <input type="text" name="release" value="">
+      <input type="text" class="inputText" name="release" value="">
       <br><br>
-      <input type="submit" name="submit" value="Add Movie">
+      <input type="submit" class="submit" name="submit" value="Add Movie">
     </form>
   </div>
 </body>
