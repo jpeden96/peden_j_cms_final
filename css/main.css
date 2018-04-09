@@ -38,11 +38,28 @@ ul li {
 .details-movie {
   float:  left;
   width: 50%;
+  padding: 20px;
 }
 
 .video {
   float: right;
-  width: 50%;
+  width: 40%;
+}
+.back {
+  padding:    20px;
+}
+
+.dropdown {
+  padding:    20px;
+}
+
+span {
+  font-size: 1.5em;
+  padding:    20px;
+}
+
+video {
+  width: 90%;
 }
 /*dropdown menu*/
 /*

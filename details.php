@@ -19,8 +19,9 @@
 <title>Details</title>
 </head>
 <body>
-
-				<a href=\"index.php\">Back...</a>
+<div class="back">
+				<a href="index.php">Back...</a>
+			</div>
 	<?php
 
 		if(!is_string($getMovie)) {
